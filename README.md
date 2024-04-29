@@ -1,53 +1,54 @@
-# GrandMA2-Keyboard
-Custom handwired keyboard of the grandMA2 programming section, that sends MIDI notes to control the console.
+# GrandMA2键盘
+
+自定义手工打造的grandMA2编程区键盘,可发送MIDI信息控制控制台。
 
 [<img src="https://user-images.githubusercontent.com/80170229/210251196-0c96b4aa-1008-4bc5-b2f8-234fe1ce431a.jpg" style="width: 25% "/>](https://user-images.githubusercontent.com/80170229/210251196-0c96b4aa-1008-4bc5-b2f8-234fe1ce431a.jpg)
 
-* Keyboard Maintainer: [Jonas Hartmann](https://github.com/hartmann-jonas)
-* Used controller: Raspberry Pi Pico
-* Used switches: Cherry MX Black
+* 键盘维护者: [Jonas Hartmann](https://github.com/hartmann-jonas)
+* 使用的控制器: Raspberry Pi Pico
+* 使用的开关: Cherry MX Black
 
-## Parts:
-Electronics
-|Amount   |Part                                                     |Where to buy |
+## 部件:
+电子部件
+|数量	   |部件                                                     |购买地点 |
 |---------|---------------------------------------------------------|-------------|
-|70       |Cherry MX Black (For the same feeling as on the console) |[Reichelt.de](https://www.reichelt.de/de/en/cherry-mx-black-button-module-snap-on-attachment-cherry-mx1a-11nn-p202566.html?GROUPID=8099&START=0&OFFSET=16&SID=948d18f492480c7446a44c8ae52c183448e11f7a36750ce1244e6&LANGUAGE=EN&&r=1) (Germany)|
-|70       |Diodes 1N 914                                            |[Reichelt.de](https://www.reichelt.de/de/en/rectifier-diode-do35-100-v-0-2-a-1n-914-p1763.html?nbc=1&&r=1) (Germany)|
-|1        |Raspberry Pi Pico                                        |[Reichelt.de](https://www.reichelt.de/de/en/raspberry-pi-pico-rp2040-cortex-m0-microusb-header-rasp-pi-pico-h-p305824.html?nbc=1&&r=1) (Germany)|
-|1        |Insulated copper wire                                    |[Reichelt.de](https://www.reichelt.de/de/en/insulated-braided-copper-wire-10-m-1-x-0-14-mm-red-litze-rt-p10297.html?nbc=1&&r=1) (Germany)|
+|70       |Cherry MX Black (与控制台感觉相同) |[德国](https://www.reichelt.de/de/en/cherry-mx-black-button-module-snap-on-attachment-cherry-mx1a-11nn-p202566.html?GROUPID=8099&START=0&OFFSET=16&SID=948d18f492480c7446a44c8ae52c183448e11f7a36750ce1244e6&LANGUAGE=EN&&r=1) (Germany)|
+|70       |二极管 1N 914                                            |[德国](https://www.reichelt.de/de/en/rectifier-diode-do35-100-v-0-2-a-1n-914-p1763.html?nbc=1&&r=1) (Germany)|
+|1        |Raspberry Pi Pico                                        |[德国](https://www.reichelt.de/de/en/raspberry-pi-pico-rp2040-cortex-m0-microusb-header-rasp-pi-pico-h-p305824.html?nbc=1&&r=1) (Germany)|
+|1        |绝缘铜线                                    |[德国](https://www.reichelt.de/de/en/insulated-braided-copper-wire-10-m-1-x-0-14-mm-red-litze-rt-p10297.html?nbc=1&&r=1) (Germany)|
 
-Lasercut parts
-|Amount |Part         |File             |
+激光切割部件
+|数量 |部件         |文件             |
 |-------|-------------|-----------------|
-|1      |Top Plate    |[top-plate.dxf](https://github.com/hartmann-jonas/GrandMA2-Keyboard/blob/main/dxf-files/top-plate.dxf)       |
-|1      |Switch Plate |[switch-plate.dxf](https://github.com/hartmann-jonas/GrandMA2-Keyboard/blob/main/dxf-files/switch-plate.dxf) |
-|1      |Bottom Plate |[bottom-plate.dxf](https://github.com/hartmann-jonas/GrandMA2-Keyboard/blob/main/dxf-files/bottom-plate.dxf) |
-|1      |Cable Plate  |[cable-plate.dxf](https://github.com/hartmann-jonas/GrandMA2-Keyboard/blob/main/dxf-files/cable-plate.dxf)   |
-|5      |Wall Plate   |[wall-plate.dxf](https://github.com/hartmann-jonas/GrandMA2-Keyboard/blob/main/dxf-files/wall-plate.dxf)     |
+|1      |顶板    |[top-plate.dxf](https://github.com/hartmann-jonas/GrandMA2-Keyboard/blob/main/dxf-files/top-plate.dxf)       |
+|1      |开关板 |[switch-plate.dxf](https://github.com/hartmann-jonas/GrandMA2-Keyboard/blob/main/dxf-files/switch-plate.dxf) |
+|1      |底板 |[bottom-plate.dxf](https://github.com/hartmann-jonas/GrandMA2-Keyboard/blob/main/dxf-files/bottom-plate.dxf) |
+|1      |电缆板  |[cable-plate.dxf](https://github.com/hartmann-jonas/GrandMA2-Keyboard/blob/main/dxf-files/cable-plate.dxf)   |
+|5      |侧板   |[wall-plate.dxf](https://github.com/hartmann-jonas/GrandMA2-Keyboard/blob/main/dxf-files/wall-plate.dxf)     |
 
 
-## Guide:
-*All the parts as well as the plates are required*
+## 指南:
+*所有部件和板材都是必需的*
 
-### Step 1:
-Place all the switches in the switch plate
+### 步骤1:
+在开关板上放置所有开关
 
-### Step 2:
-Solder the switches and diodes, according to the wiring matrix. *Don't solder the rows and columns to the pico yet!*
+### 步骤2:
+根据线路图焊接开关和二极管。不要立即将行和列焊接到pico上!
 
 [<img src="https://raw.githubusercontent.com/hartmann-jonas/GrandMA2-Keyboard/main/images/soldering.jpeg" style="width: 80%"/>](https://raw.githubusercontent.com/hartmann-jonas/GrandMA2-Keyboard/main/images/soldering.jpeg)
 
-Do not go too hot with the temperature on the soldering iron. 300°C worked fine for me.
+焊接时不要将温度调太高。 对我来说 300°C 工作正常。
 
-### Step 3:
-* You need to install KMK on the microcontroller by following [this](https://github.com/KMKfw/kmk_firmware/blob/master/docs/en/Getting_Started.md) guide.
-* After installing KMK you need to replace the contents of your code.py or main.py file with [this file](https://github.com/hartmann-jonas/GrandMA2-Keyboard/blob/main/code.py).
+### 步骤3:
+* 按照 这个 指南在微控制器上安装 KMK。 [this](https://github.com/KMKfw/kmk_firmware/blob/master/docs/en/Getting_Started.md) guide.
+* 安装 KMK 后,需要用 这个文件 的内容替换你的 code.py 或 main.py 文件。 [this file](https://github.com/hartmann-jonas/GrandMA2-Keyboard/blob/main/code.py).
 
-* If you run into errors when trying to send MIDI notes you might need to install the [adafruit_midi](http://kmkfw.io/docs/midi/) library on the microcontroller.
+* 如果在尝试发送MIDI信息时遇到错误,您可能需要在微控制器上安装 [adafruit_midi](http://kmkfw.io/docs/midi/) adafruit_midi 库。
 
-### Step 4:
-Now solder the rows and columns to the pico
-|Row    |Pico |Column     |Pico |
+### 步骤4:
+现在将行和列焊接到pico上
+|行号    |Pico引脚 |列号     |Pico引脚 |
 |-------|-----|-----------|-----|
 |Row 0  |GP 5 |Column 0   |GP 4 |
 |Row 1  |GP 8 |Column 1   |GP 3 |
@@ -61,31 +62,30 @@ Now solder the rows and columns to the pico
 |Row 9  |GP 14|
 |Row 10 |GP 15|
 
-### Step 5:
-* Select the keyboard in the GrandMA2 onPC's *Midi In* settings
-* Map the midi notes to the midi remote in GrandMA2 onPC
+### 步骤5:
+* 在 GrandMA2 onPC 的 Midi In 设置中选择键盘
+* 在 GrandMA2 onPC 中将midi音符映射到midi远程
 
-### Wiring Matrix:
+### 线路图:
 ![keyboard](https://user-images.githubusercontent.com/80170229/210251995-ce025866-0632-42f6-a9ac-d74b289f22e6.svg)
 [keyboard.pdf](https://github.com/hartmann-jonas/GrandMA2-Keyboard/files/10332369/keyboard.pdf)
 
 
-### Firmware:
-The firmware is written using [KMK](http://kmkfw.io).
+### 固件:
+固件使用 KMK 编写。 [KMK](http://kmkfw.io).
 
 
 ### Midi:
-The midi notes need to be mapped new in every different showfile!
+midi音符需要在每个不同的showfile中重新映射!
 
-To import the midi mappings into your showfile, copy the [MA2_Keyboard.xml](https://github.com/hartmann-jonas/GrandMA2-Keyboard/blob/main/midi-mapping/MA2_Keyboard.xml) into your `importexport` folder of your GrandMA2 install and run the import command
+要将midi映射导入showfile,请将 [MA2_Keyboard.xml](https://github.com/hartmann-jonas/GrandMA2-Keyboard/blob/main/midi-mapping/MA2_Keyboard.xml) 复制到 GrandMA2 安装的 `importexport` 文件夹中,并运行导入命令
 ```
 import "MA2_Keyboard" at remote 2
 ```
-***NOTE***: If you already have midi mapping setup in your showfile, make sure there are no collisions of midi note numbers.
+***注意***: 如果您的showfile中已经设置了midi映射,请确保midi音符号没有冲突。
 
-## Setup in GrandMA2 onPC
-You need to set the "Note" value in GrandMA2's Remote Input Setting to the following table
-
+## 在 GrandMA2 onPC 中设置
+您需要将 GrandMA2 的远程输入设置中的“Note”值设置为以下表格:
 |Midi Number|Key|
 |--|-----------|
 |0|Encoder Key |
